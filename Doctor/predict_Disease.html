@@ -1,0 +1,249 @@
+<!-- HTML5 Document Type Declaration -->
+<!doctype html>
+<!-- Set document language to English for accessibility -->
+<html lang="en">
+    <head>
+        <!-- Character encoding for proper text rendering -->
+        <meta charset="utf-8">
+        <!-- Viewport settings for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Meta tags for SEO -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+       <!-- Page title  -->
+       <title>Tooth - Predict Disease</title>
+
+       <!-- Favicon for browser tab -->
+       <link rel="icon" href="../css/images/tooth-cleaning.png" type="">
+
+        <!-- CSS FILES -->
+        <!-- Google Fonts - Montserrat and Open Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Icons -->
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Custom stylesheet -->
+        <link href="../css/templatemo-topic-listing.css" rel="stylesheet">
+
+
+    </head>
+
+    <body id="top">
+        <!-- Main content container -->
+        <main>
+
+            <!-- Main navigation bar -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                     <!-- Brand/logo -->
+                     <a class="navbar-brand" href="index_doctor.html">
+                        <img src="../css/images/tooth-cleaning.png"  width="28" height="28">
+                        <span>tooth</span>
+                    </a>
+
+                    <!-- Mobile menu icon -->
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+
+                    <!-- Hamburger menu button for mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navigation links -->
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href=""> Subscribe </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href=""> patients  </a>
+                            </li>
+
+
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Predtiction</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item active" href="predict_age.html">Predict Age</a>
+                                    </li>
+
+                                    <li >
+                                        <a class="dropdown-item active" href="predict_Disease.html">Predict Disease</a>
+                                    </li>
+
+                                    <li >
+                                        <a class="dropdown-item active" href="predict_gender.html">Predict Gender</a>
+                                    </li>
+
+                                    <li >
+                                        <a class="dropdown-item active" href="predict_Teeth.html">Predict Teeth</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- only here to add space -->
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="">  </a>
+                            </li>
+
+
+                        </ul>
+
+                        <!-- User profile icon (desktop) -->
+                        <div class="d-none d-lg-block">
+                            <a href="doctor_Profile.html" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+
+           <!-- Page header with breadcrumbs and title -->
+           <header class="site-header d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+
+                    <!-- Left column with breadcrumbs and title -->
+                    <div class="col-lg-5 col-12 mb-5">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index_doctor.html">Homepage</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Predict Disease</li>
+                            </ol>
+                        </nav>
+                        <h2 class="text-white">Predict Disease</h2>
+                    </div>
+
+                    <!-- Right column with header image -->
+                    <div class="col-lg-5 col-12">
+                        <div class="topics-detail-block bg-white shadow-lg">
+                            <img src="../css/images/disease2.jpg" class="topics-detail-block-image img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+
+
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <h4 class="mb-4 pb-2">Upload Your X-ray Here To Predict Disease </h4>
+
+                        <!-- Before Image -->
+                        <div class="col-lg-5 col-12">
+                            <h4 class="mb-4 pb-2">Before</h4>
+                            <img id="before-image" src="../css/images/models/dental-background.jpg" class="newsletter-image img-fluid" alt="">
+                        </div>
+
+                        <!-- After Image -->
+                        <div class="col-lg-5 col-12">
+                            <h4 class="mb-4 pb-2">After</h4>
+                            <img id="after-image" src="../css/images/models/dental-background.jpg" class="newsletter-image img-fluid" alt="">
+                        </div>
+
+                        <div class="col-lg-9 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
+                            <form class="custom-form subscribe-form" id="diseaseform" action="#" method="post" role="form" enctype="multipart/form-data">
+                                <div class="col-lg-9 col-12 d-flex align-items-center">
+                                    <img src="../css/images/image_attach.png" width="30" height="30" alt="Attach Icon">
+                                    <span class="mb-0 ms-2">Upload</span>
+                                    <label for="upload" class="ms-3 mb-0">
+                                        <input type="file" name="upload" id="upload" accept="image/*" required>
+                                    </label>
+                                </div>
+                                <br>
+                                <div class="col-lg-9 col-12" style="display: flex; justify-content: center;padding-left: 15%">
+                                    <button type="submit" class="form-control">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer section -->
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+                    <!-- Brand Column -->
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="../index.html">
+                            <img src="../css/images/tooth-cleaning.png"  width="28" height="28">
+                            <span>tooth</span>
+                        </a>
+                    </div>
+
+                    <!-- Resources Links -->
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="index_doctor.html" class="site-footer-link">Home</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="../contact.html" class="site-footer-link">Contact</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_2" class="site-footer-link">Our Users</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_3" class="site-footer-link">How it works</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_4" class="site-footer-link">Trending News</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_5" class="site-footer-link">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Information Column -->
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+                        <p class="text-white d-flex">
+                            <a href="mailto:team@FCAI.com" class="site-footer-link">
+                                team@FCAI.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Language Selector and Copyright -->
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                          <!--tepm-->
+
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright ©2025 . All rights reserved.
+                            <br><br>Designers: <a rel="nofollow" href="" target="_blank">Mariam & Kholod</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript Files -->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/jquery.sticky.js"></script>
+        <script src="../js/click-scroll.js"></script>
+        <script src="../js/custom.js"></script>
+        <script src="../js/Student/predict_disease_js.js"></script>
+    </body>
+</html>
