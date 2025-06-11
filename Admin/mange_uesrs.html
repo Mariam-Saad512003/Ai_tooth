@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Meta tags for character encoding and responsive design -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- SEO meta tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Page title -->
+        <title>Tooth - Manage Users</title>
+
+        <!--favicon -->
+        <link rel="icon" href="../css/images/tooth-cleaning.png" type="">
+
+        <!-- CSS FILES -->
+        <!-- Google Fonts preconnect for performance optimization -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts import -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Icons -->
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../css/templatemo-topic-listing.css" rel="stylesheet">
+
+
+    </head>
+
+    <body id="top">
+        <main>
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Brand/logo -->
+                    <a class="navbar-brand" href="index_admin.html">
+                        <img src="../css/images/tooth-cleaning.png" width="28" height="28" alt="Tooth logo">
+                        <span>tooth</span>
+                    </a>
+
+                    <!-- Navigation links -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="mange_uesrs.html">Manage Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="manage_payments.html">Manage Payments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="mange_plan.html">Manage Plans</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="add_quiz.html">Add Quiz</a>
+                            </li>
+                        </ul>
+
+                        <!-- User profile icon (desktop) -->
+                        <div class="d-none d-lg-block">
+                            <a href="admin_Profile.html" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5 col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index_admin.html">Homepage</a></li>
+
+                                    <li class="breadcrumb-item active" aria-current="page"> Manage Users</li>
+                                </ol>
+                            </nav>
+
+                        </div>
+
+                    </div>
+                </div>
+              </header>
+
+            <!--Doctor table-->
+            <section>
+                <div class="row justify-content-center g-4 mt-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h2 class="mb-4">Our Doctors</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12">
+                        <div class="table-responsive text-nowrap">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Doctor Name</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Clinic</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><strong>Sama Osaman</strong></td>
+                                        <td>samaOsaman</td>
+                                        <td>samaOsaman_18@example.com</td>
+                                        <td>Helwan</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-trash me-1"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><strong>Ahmed Nabil</strong></td>
+                                        <td>ahmedN</td>
+                                        <td>ahmed.nabil@example.com</td>
+                                        <td>Maadi</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-trash me-1"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><strong>Rania Khaled</strong></td>
+                                        <td>raniaKhaled</td>
+                                        <td>rania.khaled@example.com</td>
+                                        <td>Nasr City</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-trash me-1"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+             </section>
+
+            <!--Student table-->
+            <section>
+                <div class="row justify-content-center g-4 mt-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h2 class="mb-4">Our Students</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12">
+                        <div class="table-responsive text-nowrap">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Student Name</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>University</th>
+                                        <th>Level</th>
+                                        <th>Total Points</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><strong>Tokatoka Salah</strong></td>
+                                        <td>TokatokaSalah</td>
+                                        <td>TokatokaSalah_11@gmail.com</td>
+                                        <td>Helwan</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-trash me-1"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Add more student rows here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+             </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+                    <!-- Brand Column -->
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <img src="../css/images/tooth-cleaning.png"  width="28" height="28">
+                            <span>Tooth</span>
+                        </a>
+                    </div>
+
+                    <!-- Resources Links -->
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="index_admin.html" class="site-footer-link">Home</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="../contact.html" class="site-footer-link">Contact</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">How it works</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">FAQs</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Information Column -->
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                305-240-9671
+                            </a>
+                        </p>
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                info@company.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Language Selector and Copyright -->
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                          <!--tepm-->
+
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright ©2025 . All rights reserved.
+                        <br><br>Design: <a rel="nofollow" href="" target="_blank">Mariam</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript Files -->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/jquery.sticky.js"></script>
+        <script src="../js/click-scroll.js"></script>
+        <script src="../js/custom.js"></script>
+    </body>
+</html>
