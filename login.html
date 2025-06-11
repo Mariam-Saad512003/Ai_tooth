@@ -1,92 +1,189 @@
 <!DOCTYPE html>
 <!-- Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>  Login and Signup </title>
+  <title>Login - Dental AI Platform</title>
   <!--favicon -->
   <link rel="icon" href="images/tooth-cleaning.png" type="">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/loginCss.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- Boxicons CSS -->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .login-header h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .form-group label {
+      font-weight: 500;
+      color: #555;
+    }
+
+    .form-group input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .submit-btn {
+      background: #007bff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #0056b3;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .register-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      background: #dc3545;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-  <section class="container forms">
-    <div class="form login">
-      <div class="form-content">
-        <header>Login</header>
-        <form action="#">
-          <div class="field input-field">
-            <input type="text" placeholder="Username" class="input">
-          </div>
-          <div class="field input-field">
-            <input type="password" placeholder="Password" class="password">
-            <i class='bx bx-hide eye-icon'></i>
-          </div>
-          <div class="form-link">
-            <a href="#" class="forgot-pass">Forgot password?</a>
-          </div>
-          <div class="field button-field">
-            <button>Login</button>
-          </div>
-        </form>
-        <div class="form-link">
-          <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
-        </div>
-      </div>
-      <div class="line"></div>
-      
-      <div class="media-options">
-        <a href="#" class="field google">
-          <img src="images/google.png" alt="" class="google-img">
-          <span>Login with Google</span>
-        </a>
-      </div>
+  <div class="login-container">
+    <div class="login-header">
+      <h1>Welcome Back</h1>
+      <p>Login to your account</p>
     </div>
 
+    <div class="error-message" id="errorMessage"></div>
 
-    <!-- Signup Form -->
-    <div class="form signup">
-      <div class="form-content">
-        <header>Signup</header>
-        <form action="#">
-          <div class="field input-field">
-            <input type="email" placeholder="Email" class="input">
-          </div>
-          <div class="field input-field">
-            <input type="password" placeholder="Create password" class="password">
-          </div>
-          <div class="field input-field">
-            <input type="password" placeholder="Confirm password" class="password">
-            <i class='bx bx-hide eye-icon'></i>
-          </div>
-          <div class="field button-field">
-            <button>Signup</button>
-          </div>
-        </form>
-        <div class="form-link">
-          <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
-        </div>
+    <form class="login-form" id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
       </div>
-      <div class="line"></div>
-     
-      <div class="media-options">
-        <a href="#" class="field google">
-          <img src="images/google.png" alt="Google" class="google-img">
-          <span>Login with Google</span>
-        </a>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
       </div>
+
+      <button type="submit" class="submit-btn">Login</button>
+    </form>
+
+    <div class="register-link">
+      Don't have an account? <a href="register.html">Register here</a>
     </div>
-  </section>
+  </div>
+
   <!-- JavaScript -->
-  <script src="js/login/auth.js"></script>
+  <script type="module">
+    import AuthService from './js/api/AuthService.js';
+    import RoleManager from './js/utils/RoleManager.js';
 
-  <script src="js/login/login.js"></script>
-  <script src="js/Admin/index_admin.js"></script>
+    const loginForm = document.getElementById('loginForm');
+    const errorMessage = document.getElementById('errorMessage');
+    const authService = new AuthService();
+
+    // Check if user is already logged in
+    if (authService.isAuthenticated()) {
+      const role = RoleManager.getRoleFromToken();
+      redirectBasedOnRole(role);
+    }
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(loginForm);
+      const data = {
+        email: formData.get('email'),
+        password: formData.get('password')
+      };
+
+      try {
+        const response = await authService.login(data);
+        if (response.success) {
+          const role = RoleManager.getRoleFromToken();
+          redirectBasedOnRole(role);
+        }
+      } catch (error) {
+        showError(error.message || 'Login failed. Please try again.');
+      }
+    });
+
+    function redirectBasedOnRole(role) {
+      switch (role) {
+        case RoleManager.ROLES.ADMIN:
+          window.location.href = 'admin.html';
+          break;
+        case RoleManager.ROLES.DOCTOR:
+          window.location.href = 'patient.html';
+          break;
+        case RoleManager.ROLES.STUDENT:
+          window.location.href = 'prediction.html';
+          break;
+        default:
+          window.location.href = 'prediction.html';
+      }
+    }
+
+    function showError(message) {
+      errorMessage.textContent = message;
+      errorMessage.style.display = 'block';
+    }
+  </script>
 </body>
+
 </html>
